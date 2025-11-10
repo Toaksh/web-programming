@@ -1,0 +1,46 @@
+.colors h3 {
+  margin-bottom: 10px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.modes {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.btn.small {
+  font-size: 12px;
+  background-color: #3a3a3a;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn.small.active {
+  background-color: #4f46e5;
+}
+
+.color-swatches {
+  display: flex;
+  gap: 10px;
+}
+
+.color {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.color:hover {
+  transform: scale(1.1);
+}
+
+.color.active {
+  box-shadow: 0 0 0 3px #ffffff55, 0 0 0 5px #4f46e5;
+}

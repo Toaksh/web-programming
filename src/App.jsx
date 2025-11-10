@@ -1,27 +1,22 @@
-import './App.css';
+import React, { useState } from "react";
+import '/workspaces/codespaces-react/src/CSS/App.css';
+
+
+import ActionsList from "/workspaces/codespaces-react/src/Components/ActionsList.jsx";
+import Avatars from "/workspaces/codespaces-react/src/Components/Avatars.jsx";
+import TitleList from "/workspaces/codespaces-react/src/Components/TitleList.jsx";
+import ColorPicker from "/workspaces/codespaces-react/src/Components/Colorpicker.jsx";
 
 function App() {
+  const [backgroundColor, setBackgroundColor] = useState("#1e1e1e");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+    <div className="app" style={{ backgroundColor }}>
+      <div className="ui-kit">
+        <ColorPicker onColorSelect={setBackgroundColor} />
+        <TitleList />
+        <ActionsList />
+        <Avatars />
+      </div>
     </div>
   );
 }

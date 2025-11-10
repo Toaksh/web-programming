@@ -1,0 +1,25 @@
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  transition: background-color 0.3s;
+}
+
+.ui-kit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background-color: #2a2a2a;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  background-color: #2f2f2f;
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+  position: relative;}

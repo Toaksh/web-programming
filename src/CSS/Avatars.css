@@ -1,0 +1,18 @@
+.avatars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}

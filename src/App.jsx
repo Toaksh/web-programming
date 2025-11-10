@@ -3,7 +3,7 @@ import './CSS/App.css';
 
 
 import ActionsList from "./Components/ActionsList.jsx";
-import Avatars from "./Components/Avatars.jsx";
+import Avatars from "./Components/Avatars/Avatars.jsx";
 import TitleList from "./Components/TitleList.jsx";
 import ColorPicker from "./Components/Colorpicker.jsx";
 

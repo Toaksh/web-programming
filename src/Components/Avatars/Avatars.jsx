@@ -1,7 +1,7 @@
 import React from "react";
-import "../CSS/Avatars.css";
+import "../../CSS/Avatars.css";
 
-export default function Avatars() {
+export default function Avatars(props) { // {style: {display: flex, gap: "4px"}}
   const users = [
     { name: "Alby", color: "#999" },
     { name: "Maria", color: "#333" },
@@ -10,7 +10,7 @@ export default function Avatars() {
   ];
 
   return (
-    <div className="card avatars">
+    <div className="card avatars" style={props.style}>
       {users.map((user) => (
         <div key={user.name} className="avatar">
           <div

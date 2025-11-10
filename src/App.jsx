@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import '/workspaces/codespaces-react/src/CSS/App.css';
+import './CSS/App.css';
 
 
-import ActionsList from "/workspaces/codespaces-react/src/Components/ActionsList.jsx";
-import Avatars from "/workspaces/codespaces-react/src/Components/Avatars.jsx";
-import TitleList from "/workspaces/codespaces-react/src/Components/TitleList.jsx";
-import ColorPicker from "/workspaces/codespaces-react/src/Components/Colorpicker.jsx";
+import ActionsList from "./Components/ActionsList.jsx";
+import Avatars from "./Components/Avatars.jsx";
+import TitleList from "./Components/TitleList.jsx";
+import ColorPicker from "./Components/Colorpicker.jsx";
 
 function App() {
   const [backgroundColor, setBackgroundColor] = useState("#1e1e1e");

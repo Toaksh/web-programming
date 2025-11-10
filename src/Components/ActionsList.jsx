@@ -1,5 +1,5 @@
 import React from "react";
-import "/workspaces/codespaces-react/src/CSS/ActionsList.css";
+import "../CSS/ActionsList.css";
 
 export default function ActionsList() {
   const actions = ["Copy", "Add to List", "Markup", "Print"];

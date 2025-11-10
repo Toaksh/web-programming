@@ -1,5 +1,5 @@
 import React from "react";
-import "/workspaces/codespaces-react/src/CSS/TitleList.css";
+import "../CSS/TitleList.css";
 
 export default function TitleList() {
   return (

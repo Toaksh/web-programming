@@ -1,5 +1,5 @@
 import React from "react";
-import "/workspaces/codespaces-react/src/CSS/Avatars.css";
+import "../CSS/Avatars.css";
 
 export default function Avatars() {
   const users = [

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "/workspaces/codespaces-react/src/CSS/ColorPicker.css";
+import "../CSS/ColorPicker.css";
 
 export default function ColorPicker({ onColorSelect }) {
   const colors = [

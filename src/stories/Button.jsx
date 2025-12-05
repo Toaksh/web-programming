@@ -31,7 +31,7 @@ Button.propTypes = {
   /** What background color to use */
   backgroundColor: PropTypes.string,
   /** How large should the button be? */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['small', 'medium', 'large','merge_large']),
   /** Button contents */
   label: PropTypes.string.isRequired,
   /** Optional click handler */

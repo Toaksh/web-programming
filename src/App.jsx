@@ -1,11 +1,30 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import './CSS/App.css';
 
 import ActionsList from "./Components/ActionsList.jsx";
 import Avatars from "./Components/Avatars/Avatars.jsx";
 import TitleList from "./Components/TitleList.jsx";
 import ColorPicker from "./Components/Colorpicker.jsx";
+
+const ComponentsMap = {
+  "ColorPicker": ColorPicker,
+  "Avatars":Avatars,
+  "ActionsList":ActionsList,
+  "TitleList":TitleList
+}
+
+ function Components() {
+  let Components = useParams();
+  const Component = ComponentsMap[Components.Components] 
+  if (!Component) {
+    return <Navigate to="/" replace />;
+    // или: return <h2>Компонент не найден</h2>
+  }
+
+  return <Component />;
+ }
 
 function App() {
   const [backgroundColor, setBackgroundColor] = useState("#1e1e1e");
@@ -16,11 +35,11 @@ function App() {
 
         {/* Страница ColorPicker */}
         <Route
-          path="/colorpicker"
+          path="/:Components"
           element={
             <div className="app" style={{ backgroundColor }}>
               <div className="ui-kit">
-                <ColorPicker onColorSelect={setBackgroundColor} />
+                <Components />
               </div>
             </div>
           }

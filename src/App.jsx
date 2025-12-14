@@ -8,19 +8,30 @@ import Avatars from "./Components/Avatars/Avatars.jsx";
 import TitleList from "./Components/TitleList.jsx";
 import ColorPicker from "./Components/Colorpicker.jsx";
 
-const ComponentsMap = {
-  "ColorPicker": ColorPicker,
-  "Avatars":Avatars,
-  "ActionsList":ActionsList,
-  "TitleList":TitleList
-}
+const componentsMap = {
+  ColorPicker: {
+    component: ColorPicker,
+    code: `<ColorPicker />`
+  },
+  Avatars: {
+    component: Avatars,
+    code: `<Avatars />`
+  },
+  ActionsList: {
+    component: ActionsList,
+    code: `<ActionsList />`
+  },
+  TitleList: {
+    component: TitleList,
+    code: `<TitleList />`
+  }
+};
 
  function Components() {
   let Components = useParams();
   const Component = ComponentsMap[Components.Components] 
   if (!Component) {
-    return <Navigate to="/" replace />;
-    // или: return <h2>Компонент не найден</h2>
+    return <h2>Компонент не найден</h2>
   }
 
   return <Component />;
